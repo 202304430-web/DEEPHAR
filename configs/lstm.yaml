@@ -1,0 +1,15 @@
+# Classic model (Core Req. #4a): BiLSTM, raw 9-channel IMU windows.
+run_name: lstm
+model: lstm
+model_params:
+  hidden_dim: 64
+  num_layers: 2
+  dropout: 0.3
+modality: all          # 9 channels
+augment: true           # standard config uses augmentation; see data-strategy study for the no-aug pair
+lr: 0.001
+weight_decay: 0.0001
+batch_size: 64           # RTX 3060 / 16GB RAM safe default
+epochs: 60
+early_stop_patience: 10
+num_workers: 2

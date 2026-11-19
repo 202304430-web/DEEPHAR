@@ -1,0 +1,18 @@
+# Modern model (Core Req. #4b): Transformer encoder, trained from scratch.
+# Pretrained-vs-scratch comparison (Req. #7) is N/A for this project — documented in report.
+run_name: transformer
+model: transformer
+model_params:
+  d_model: 64
+  num_heads: 4
+  num_layers: 3
+  ff_dim: 128
+  dropout: 0.1
+modality: all
+augment: true
+lr: 0.0005               # transformers typically need a lower LR than RNN/CNN baselines
+weight_decay: 0.0001
+batch_size: 64
+epochs: 60
+early_stop_patience: 10
+num_workers: 2

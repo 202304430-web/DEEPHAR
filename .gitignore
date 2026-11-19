@@ -1,0 +1,8 @@
+data/raw/
+data/processed/
+checkpoints/*.pt
+experiments/results/*.json
+experiments/results/*.csv
+__pycache__/
+*.pyc
+.venv/

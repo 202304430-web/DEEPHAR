@@ -1,0 +1,13 @@
+# Data-strategy study (Core Req. #7), axis = augmentation on/off. Paired with cnn_lstm.yaml
+# (which has augment: true) — everything else identical, same protocol/seeds/budget.
+run_name: cnn_lstm_no_augment
+model: cnn_lstm
+model_params: {cnn_channels: [32, 64], lstm_hidden: 64, dropout: 0.3}
+modality: all
+augment: false
+lr: 0.001
+weight_decay: 0.0001
+batch_size: 64
+epochs: 60
+early_stop_patience: 10
+num_workers: 2

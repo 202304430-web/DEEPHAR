@@ -1,0 +1,14 @@
+# Baseline (Core Req. #3): 2-layer MLP on precomputed handcrafted features.
+run_name: baseline_mlp
+model: baseline_mlp
+model_params:
+  hidden_dim: 128
+  dropout: 0.3
+modality: all        # unused by baseline (feature-based), kept for logging symmetry
+augment: false        # unused by baseline
+lr: 0.001
+weight_decay: 0.0001
+batch_size: 64
+epochs: 50
+early_stop_patience: 8
+num_workers: 2
